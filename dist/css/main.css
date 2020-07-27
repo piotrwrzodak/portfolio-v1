@@ -64,7 +64,7 @@ section {
     overflow: hidden; }
     section#home h5 {
       margin-top: 15vh; }
-  section#work h2, section#contact h2, section#about h2 {
+  section#work h2, section#contact h2, section#skills h2, section#about h2 {
     display: grid;
     width: 100%;
     align-items: center;
@@ -73,7 +73,8 @@ section {
     grid-gap: 20px; }
   section#work h2:before,
   section#work h2:after, section#contact h2:before,
-  section#contact h2:after, section#about h2:before,
+  section#contact h2:after, section#skills h2:before,
+  section#skills h2:after, section#about h2:before,
   section#about h2:after {
     content: '';
     border-top: 2px solid; }

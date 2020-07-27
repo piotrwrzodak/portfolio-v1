@@ -1,5 +1,4 @@
 @import 'config';
-@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -91,6 +90,7 @@ section {
   }
   &#work,
   &#contact,
+  &#skills,
   &#about {
     h2 {
       display: grid;
