@@ -20,6 +20,20 @@ $background-opacity: 0.9;
   }
 }
 
+@keyframes down {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+}
+
 // Set Text Color
 @function set-text-color($color) {
   @if (lightness($color) > 40) {
