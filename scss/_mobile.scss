@@ -61,11 +61,11 @@
   // Menu Button
 
   .top {
+    z-index: 100;
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 33;
-    background: #333;
+    background: #000;
     height: 4rem;
     overflow: hidden;
     display: block;
@@ -82,7 +82,7 @@
 
     .menu-btn {
       z-index: 3;
-      right: 35px;
+      right: 30px;
       top: 22px;
       position: absolute;
       cursor: pointer;
@@ -123,6 +123,7 @@
   section {
     text-align: left;
     float: left;
+
     #home h5 {
       margin-top: 7vh;
     }
@@ -179,7 +180,7 @@
     }
 
     .nav-item {
-      transform: translate3d(4000px, 0, 0);
+      transform: translate3d(3000px, 0, 0);
       @include easeOut;
 
       &.show {
@@ -211,5 +212,11 @@
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  footer {
+    p {
+      font-size: 13px;
+    }
   }
 }

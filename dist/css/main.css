@@ -1,3 +1,13 @@
+@keyframes up {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    transform: translateY(0); } }
+
 * {
   box-sizing: border-box; }
 
@@ -37,34 +47,15 @@ header {
   color: #eece1a; }
 
 section {
+  width: 100%;
   padding: 1.7rem;
   min-height: 100vh; }
-  section .icons {
-    margin-top: 1rem; }
-    section .icons ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      align-items: center;
-      width: 100%;
-      text-align: center; }
-      section .icons ul li {
-        display: inline-block;
-        padding: 0.3rem 1rem;
-        *display: inline;
-        /*IE7*/
-        *zoom: 1;
-        /*IE7*/ }
-        section .icons ul li a {
-          font-size: 14px;
-          transition: all 0.5s ease-out; }
-          section .icons ul li a:hover {
-            color: #eece1a; }
   section#home {
     overflow: hidden; }
     section#home h5 {
       margin-top: 15vh; }
   section#work h2, section#contact h2, section#skills h2, section#about h2 {
+    padding-bottom: 3rem;
     display: grid;
     width: 100%;
     align-items: center;
@@ -78,6 +69,44 @@ section {
   section#about h2:after {
     content: '';
     border-top: 2px solid; }
+
+footer {
+  background: #000;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  bottom: 0; }
+  footer p {
+    text-align: center;
+    padding-bottom: 0.5rem; }
+  footer .to-top {
+    padding-top: 0.5rem;
+    align-items: center;
+    text-align: center;
+    animation: up 2s infinite; }
+  footer .icons {
+    margin-top: 1rem; }
+    footer .icons ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 1rem 0;
+      align-items: center;
+      width: 100%;
+      text-align: center; }
+      footer .icons ul li {
+        display: inline-block;
+        padding: 0.3rem 1rem;
+        *display: inline;
+        /*IE7*/
+        *zoom: 1;
+        /*IE7*/ }
+        footer .icons ul li a {
+          font-size: 14px;
+          transition: all 0.5s ease-out; }
+          footer .icons ul li a:hover {
+            color: #eece1a; }
 
 .about-info {
   display: grid;
@@ -106,7 +135,8 @@ section {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto; }
   .projects img {
     width: 100%;
     border: 3px #fff solid; }
@@ -151,13 +181,6 @@ section {
   background: #c4c4c4;
   color: #333; }
 
-#section-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #2b2b2b;
-  color: #fff;
-  height: 60px; }
-
 @media screen and (min-width: 1171px) {
   .projects {
     grid-template-columns: repeat(4, 1fr); } }
@@ -193,11 +216,11 @@ section {
 
 @media screen and (max-width: 500px) {
   .top {
+    z-index: 100;
     top: 0;
     position: fixed;
     width: 100%;
-    z-index: 33;
-    background: #333;
+    background: #000;
     height: 4rem;
     overflow: hidden;
     display: block;
@@ -209,7 +232,7 @@ section {
       position: absolute; }
     .top .menu-btn {
       z-index: 3;
-      right: 35px;
+      right: 30px;
       top: 22px;
       position: absolute;
       cursor: pointer;
@@ -269,7 +292,7 @@ section {
       .menu-nav.show {
         transform: translate3d(0, 0, 0); }
     .menu .nav-item {
-      transform: translate3d(4000px, 0, 0);
+      transform: translate3d(3000px, 0, 0);
       transition: all 0.5s ease-out; }
       .menu .nav-item.show {
         transform: translate3d(0, 0, 0); }
@@ -288,4 +311,6 @@ section {
       .menu .nav-link:hover {
         color: #eece1a; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  footer p {
+    font-size: 13px; } }

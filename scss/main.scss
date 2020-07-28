@@ -48,10 +48,59 @@ header {
 }
 
 section {
+  width: 100%;
   padding: 1.7rem;
   // height: 100%;
   //min-height: calc(100vh - 60px);
   min-height: 100vh;
+
+  &#home {
+    overflow: hidden;
+    h5 {
+      margin-top: 15vh;
+    }
+  }
+  &#work,
+  &#contact,
+  &#skills,
+  &#about {
+    h2 {
+      padding-bottom: 3rem;
+      display: grid;
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
+      grid-gap: 20px;
+    }
+
+    h2:before,
+    h2:after {
+      content: '';
+      border-top: 2px solid;
+    }
+  }
+}
+
+footer {
+  background: #000;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  bottom: 0;
+
+  p {
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .to-top {
+    padding-top: 0.5rem;
+    align-items: center;
+    text-align: center;
+    animation: up 2s infinite;
+  }
 
   .icons {
     margin-top: 1rem;
@@ -59,7 +108,7 @@ section {
     ul {
       list-style-type: none;
       margin: 0;
-      padding: 0;
+      padding: 1rem 0;
       align-items: center;
       width: 100%;
       text-align: center;
@@ -79,32 +128,6 @@ section {
           }
         }
       }
-    }
-  }
-
-  &#home {
-    overflow: hidden;
-    h5 {
-      margin-top: 15vh;
-    }
-  }
-  &#work,
-  &#contact,
-  &#skills,
-  &#about {
-    h2 {
-      display: grid;
-      width: 100%;
-      align-items: center;
-      text-align: center;
-      grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
-      grid-gap: 20px;
-    }
-
-    h2:before,
-    h2:after {
-      content: '';
-      border-top: 2px solid;
     }
   }
 }
@@ -152,7 +175,9 @@ section {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  //justify-items: center;
 
   img {
     width: 100%;
@@ -214,14 +239,6 @@ section {
   @extend .btn;
   background: lighten($primary-color, 50);
   color: #333;
-}
-
-#section-footer {
-  text-align: center;
-  padding: 1rem;
-  background: darken($primary-color, 10);
-  color: set-text-color($primary-color);
-  height: 60px;
 }
 
 @import 'mobile';

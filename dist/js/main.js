@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollToPlugin);
-
 // Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
@@ -72,8 +70,7 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-// Scroll to
-
+// Scroll to id
 function smoothScroll(target, duration) {
   var target = document.querySelector(target);
   var targetPosition = target.getBoundingClientRect().top;
