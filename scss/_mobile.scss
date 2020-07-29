@@ -1,7 +1,16 @@
 // Widescreens///////////////////////////////////////
 @import 'config';
 @include mediaXl {
+  .small-h {
+    display: none;
+  }
   section {
+    .first-heading {
+      display: none;
+    }
+    .lg-heading {
+      padding-top: 30vh;
+    }
     .skills-container {
       margin: 0 7rem;
     }
@@ -21,6 +30,9 @@
 
 // Desktops & Laptops////////////////////////////////
 @include mediaLg {
+  .small-h {
+    display: none;
+  }
   .projects {
     grid-template-columns: 55%;
     margin: 0 4rem;
@@ -28,6 +40,12 @@
   section {
     .skills-container {
       margin: 0 4rem;
+    }
+    .first-heading {
+      display: none;
+    }
+    .lg-heading {
+      padding-top: 30vh;
     }
     &#work,
     &#contact,
@@ -45,6 +63,9 @@
 
 // Tablets & Small Laptops//////////////////////////
 @include mediaMd {
+  .big-h {
+    display: none;
+  }
   .projects {
     grid-template-columns: 75%;
     margin: 0 2rem;
@@ -63,10 +84,6 @@
       p {
         margin: 2rem 4rem;
       }
-    }
-    .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem;
     }
 
     ul.menu-nav {
@@ -89,6 +106,9 @@
 
 // Smartphones //////////////////////////////////////////
 @include mediaSm {
+  .big-h {
+    display: none;
+  }
   footer {
     p {
       font-size: 13px;

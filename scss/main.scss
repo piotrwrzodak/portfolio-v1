@@ -171,6 +171,8 @@ header {
       max-width: 200px;
       height: auto;
       border-radius: 100%;
+      border-style: solid;
+      border-width: 0.5px;
     }
   }
 }
@@ -199,7 +201,7 @@ section {
   }
 
   .lg-heading {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 550;
     line-height: 120%;
     letter-spacing: 0.15rem;

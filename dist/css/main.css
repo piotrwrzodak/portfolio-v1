@@ -135,7 +135,9 @@ header {
   #about .wrapper .profile {
     max-width: 200px;
     height: auto;
-    border-radius: 100%; }
+    border-radius: 100%;
+    border-style: solid;
+    border-width: 0.5px; }
 
 section {
   width: 100%;
@@ -153,7 +155,7 @@ section {
     color: #e8eddf;
     margin: 0; }
   section .lg-heading {
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 550;
     line-height: 120%;
     letter-spacing: 0.15rem;
@@ -322,6 +324,12 @@ footer {
     transform: translateY(1rem); } }
 
 @media screen and (min-width: 1171px) {
+  .small-h {
+    display: none; }
+  section .first-heading {
+    display: none; }
+  section .lg-heading {
+    padding-top: 30vh; }
   section .skills-container {
     margin: 0 7rem; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
@@ -330,17 +338,25 @@ footer {
     margin: 2rem 10rem; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .small-h {
+    display: none; }
   .projects {
     grid-template-columns: 55%;
     margin: 0 4rem; }
   section .skills-container {
     margin: 0 4rem; }
+  section .first-heading {
+    display: none; }
+  section .lg-heading {
+    padding-top: 30vh; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 6rem; }
   section#work p, section#contact p, section#skills p, section#about p {
     margin: 2rem 6rem; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
+  .big-h {
+    display: none; }
   .projects {
     grid-template-columns: 75%;
     margin: 0 2rem; }
@@ -350,9 +366,6 @@ footer {
     margin: 0 2rem; }
   section#work p, section#contact p, section#skills p, section#about p {
     margin: 2rem 4rem; }
-  section .lg-heading {
-    line-height: 1;
-    margin-bottom: 1rem; }
   section ul.menu-nav {
     float: none;
     width: 100%;
@@ -365,6 +378,8 @@ footer {
     font-size: 24px; } }
 
 @media screen and (max-width: 500px) {
+  .big-h {
+    display: none; }
   footer p {
     font-size: 13px; }
   section .skills-container {
