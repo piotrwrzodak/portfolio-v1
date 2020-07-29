@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/main.css" />
     <title>Piotr Wrzodak</title>
   </head>
-
+  <!-- ////////////////////  B  O  D  Y /////////////////////////-->
   <body>
     <header>
       <div class="top">
@@ -29,7 +29,7 @@
           <div class="btn-line"></div>
         </div>
       </div>
-
+      <!-- //////////////////// M E N U  /////////////////////////-->
       <nav class="menu">
         <ul class="menu-nav">
           <li class="nav-item">
@@ -55,7 +55,7 @@
         </ul>
       </nav>
     </header>
-
+    <!-- //////////////////// H O M E /////////////////////////-->
     <section id="home">
       <div class="bg-img">
         <h1 class="first-heading">Hi, I'm</h1>
@@ -70,20 +70,28 @@
         <a href="#about" id="link0"><i class="fas fa-chevron-down"></i></a>
       </div>
     </section>
-
+    <!-- //////////////////// A B O U T /////////////////////////-->
     <section id="about">
       <h2><span>About Me</span></h2>
-      <img class="profile" src="img/profile4.jpg" />
-      <p>
-        Hey! My name is Piotr and I'm a junior web developer with a passion for
-        front end development and design. I am currently a third year student at
-        Adam Mickiewicz University pursuing a degree in computer science.
-      </p>
-      <p>
-        When I'm not on the computer, I enjoy meeting friends, jogging and
-        watching movies.
-      </p>
+      <div class="wrapper">
+        <div class="first">
+          <img class="profile" src="img/profile4.jpg" />
+        </div>
+        <div class="second">
+          <p>
+            Hey! My name is Piotr and I'm a junior web developer with a passion
+            for front end development and design. I am currently a third year
+            student at Adam Mickiewicz University pursuing a degree in computer
+            science.
+          </p>
+          <p>
+            When I'm not on the computer, I enjoy meeting friends, watching
+            movies and playing tennis.
+          </p>
+        </div>
+      </div>
     </section>
+    <!-- //////////////////// S K I L L S /////////////////////////-->
     <section id="skills">
       <h2><span>Skills</span></h2>
       <p>
@@ -91,45 +99,45 @@
         eager to learn more in this fast paced industry.
       </p>
       <p>Some technologies I have worked with:</p>
+      <div class="skills-container">
+        <div class="grid-container">
+          <div class="skill-item">
+            <img class="skill-img1" src="./img/skills/html.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img2" src="./img/skills/css.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img3" src="./img/skills/sass.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img4" src="./img/skills/js.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img5" src="./img/skills/jquery.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img6" src="./img/skills/java.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img7" src="./img/skills/bootstrap.png" />
+          </div>
 
-      <div class="grid-container">
-        <div class="skill-item">
-          <img class="skill-img1" src="./img/skills/html.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img2" src="./img/skills/css.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img3" src="./img/skills/sass.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img4" src="./img/skills/js.png" />
-        </div>
-
-        <div class="skill-item">
-          <img class="skill-img5" src="./img/skills/jquery.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img6" src="./img/skills/java.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img7" src="./img/skills/bootstrap.png" />
-        </div>
-
-        <div class="skill-item">
-          <img class="skill-img8" src="./img/skills/python.png" />
-        </div>
-        <div class="skill-item">
-          <img class="skill-img9" src="./img/skills/github.png" />
-        </div>
-        <!-- <div class="skill-item">
+          <div class="skill-item">
+            <img class="skill-img8" src="./img/skills/python.png" />
+          </div>
+          <div class="skill-item">
+            <img class="skill-img9" src="./img/skills/github.png" />
+          </div>
+          <!-- <div class="skill-item">
           <img class="skill-img10" src="./img/skills/linux.png" />
         </div> -->
+        </div>
       </div>
     </section>
+    <!-- //////////////////// W O R K  /////////////////////////-->
     <section id="work">
       <h2><span>My Work</span></h2>
-
       <div class="projects">
         <div class="project">
           <a href="#!">
@@ -144,12 +152,12 @@
             <i class="fab fa-github"></i> Github
           </a>
         </div>
-        <p>More coming soon...</p>
       </div>
+      <p>More coming soon...</p>
     </section>
+    <!-- //////////////////// C O N T A C T  /////////////////////////-->
     <section id="contact">
       <h2><span>Contact</span></h2>
-
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quod,
         temporibus reiciendis exercitationem veniam a quas quo dolorem amet
@@ -157,6 +165,7 @@
         commodi alias?
       </p>
     </section>
+    <!-- //////////////////// F O O T E R /////////////////////////-->
     <footer>
       <div class="to-top">
         <a href="#home" id="link1"><i class="fas fa-chevron-up"></i></a>

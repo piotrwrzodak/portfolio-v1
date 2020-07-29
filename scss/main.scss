@@ -13,28 +13,13 @@ body {
   line-height: 1.5;
 }
 
-// Headings
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400;
-
-  &.lg-heading {
-    font-size: 6rem;
-  }
-
-  &.sm-heading {
-    margin-bottom: 2rem;
-    //padding: 0.2rem 1rem;
-    padding-top: 0.2rem;
-    //background: rgba(lighten($primary-color, 2), 0.5);
-  }
-}
-
 a {
   color: #fff;
   text-decoration: none;
+}
+
+p {
+  text-align: center;
 }
 
 header {
@@ -47,6 +32,150 @@ header {
   color: $secondary-color;
 }
 
+////////////// NAV
+.top {
+  z-index: 100;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  background: #000;
+  height: 4rem;
+  overflow: hidden;
+  display: block;
+  transition: top 1s;
+
+  .name {
+    a {
+      left: 25px;
+      top: 16px;
+      font-size: 20px;
+      position: absolute;
+    }
+  }
+  ///////////////// Menu Button
+  .menu-btn {
+    z-index: 3;
+    right: 30px;
+    top: 22px;
+    position: absolute;
+    cursor: pointer;
+    @include easeOut;
+
+    .btn-line {
+      width: 28px;
+      height: 3px;
+      margin: 0 0 5px 0;
+      background: set-text-color($primary-color);
+      @include easeOut;
+    }
+
+    // Rotate Into X With Menu Lines
+    &.close {
+      transform: rotate(180deg);
+
+      .btn-line {
+        // Line 1 - Rotate
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        // Line 2 - Hide
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        // Line 3 - Rotate
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(6.5px, -6.5px);
+        }
+      }
+    }
+  }
+}
+
+/////////////////////////// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+  height: 100vh;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #111111;
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(3000px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: set-text-color($primary-color);
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+////////////////// PROFILE PIC
+#about {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+
+    .profile {
+      max-width: 200px;
+      height: auto;
+      border-radius: 100%;
+    }
+  }
+}
+
+//////////////////////// SECTION HOME
 section {
   width: 100%;
   padding: 1.7rem;
@@ -56,6 +185,34 @@ section {
   height: auto;
   h5 {
     margin-top: 15vh;
+  }
+
+  float: left;
+  text-align: center;
+
+  .first-heading {
+    padding-top: 20vh;
+    font-size: 3rem;
+    font-weight: 500;
+    color: #e8eddf;
+    margin: 0;
+  }
+
+  .lg-heading {
+    font-size: 4rem;
+    font-weight: 550;
+    line-height: 120%;
+    letter-spacing: 0.15rem;
+    margin: 0;
+  }
+
+  .sm-heading {
+    padding-top: 1rem;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #e8eddf;
+    margin-bottom: 2rem;
+    margin: 0;
   }
 
   &#home {
@@ -78,11 +235,20 @@ section {
       padding-top: 10vh;
     }
   }
+  /////////////////////// SECTION HEADING LINES
 
   &#work,
   &#contact,
   &#skills,
   &#about {
+    p {
+      margin: 2rem 7rem;
+    }
+
+    .second {
+      margin: 0 12rem;
+    }
+
     background-color: #fff;
     color: #000;
     h2 {
@@ -102,25 +268,58 @@ section {
       border-top: 2px solid;
     }
   }
-  &#about {
-    .profile {
-      max-width: 50%;
+}
+
+//////////////////////////SECTION   MAIN HEADINGS  SKILLS
+section {
+  .skills-container {
+    margin: 3rem 7rem 0 7rem;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .skill-item {
+    font-size: 30px;
+    padding: 1rem 0;
+    text-align: center;
+
+    .skill-img3 {
+      margin-top: 1.5rem;
+    }
+    .skill-img5 {
+      margin-top: 1rem;
+    }
+    .skill-img6 {
+      margin-top: 0.7rem;
+    }
+
+    img {
+      max-width: 60px;
       height: auto;
-      border-radius: 100%;
     }
   }
 }
 
-// Work/Projects
+/////////////////// Projects
 .projects {
-  padding-top: 5vh;
+  margin: 0 7rem 3rem 7rem;
+  //box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 40%;
   grid-template-rows: auto;
-  //justify-items: center;
+  justify-content: center;
+  align-content: center;
 
   .project {
+    margin: 2rem 0;
+    padding: 1rem 0.6rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
@@ -136,7 +335,7 @@ section {
   }
 }
 
-// Button Styles
+////////////////////////// Button Styles
 .btn {
   display: block;
   padding: 0.5rem 1rem;
@@ -160,7 +359,7 @@ section {
   color: #333;
 }
 
-// Footer ////////////////
+///////////////////////// Footer ////////////////
 footer {
   background: #000;
   height: auto;
@@ -170,10 +369,6 @@ footer {
   position: relative;
   bottom: 0;
 
-  p {
-    text-align: center;
-    bottom: 30px;
-  }
   .to-top {
     padding-top: 0.5rem;
     align-items: center;

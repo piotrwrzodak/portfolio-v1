@@ -1,254 +1,117 @@
 // Widescreens///////////////////////////////////////
+@import 'config';
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  section {
+    .skills-container {
+      margin: 0 7rem;
+    }
+    &#work,
+    &#contact,
+    &#skills,
+    &#about {
+      .second {
+        margin: 0 10rem;
+      }
+      p {
+        margin: 2rem 10rem;
+      }
+    }
   }
 }
 
 // Desktops & Laptops////////////////////////////////
 @include mediaLg {
   .projects {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 55%;
+    margin: 0 4rem;
+  }
+  section {
+    .skills-container {
+      margin: 0 4rem;
+    }
+    &#work,
+    &#contact,
+    &#skills,
+    &#about {
+      .second {
+        margin: 0 6rem;
+      }
+      p {
+        margin: 2rem 6rem;
+      }
+    }
   }
 }
 
 // Tablets & Small Laptops//////////////////////////
 @include mediaMd {
+  .projects {
+    grid-template-columns: 75%;
+    margin: 0 2rem;
+  }
   section {
-    align-items: center;
-    text-align: center;
-
+    .skills-container {
+      margin: 0 2rem;
+    }
+    &#work,
+    &#contact,
+    &#skills,
+    &#about {
+      .second {
+        margin: 0 2rem;
+      }
+      p {
+        margin: 2rem 4rem;
+      }
+    }
     .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
     }
-  }
 
-  ul.menu-nav {
-    float: none;
-    width: 100%;
-    min-height: 0;
+    ul.menu-nav {
+      float: none;
+      width: 100%;
+      min-height: 0;
 
-    &.show {
-      transform: translate3d(0, 0, 0);
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .menu-nav {
+      height: 100vh;
+      transform: translate3d(-100%, 0, 0);
+      font-size: 24px;
     }
   }
-
-  .menu-nav {
-    height: 100vh;
-    transform: translate3d(-100%, 0, 0);
-    font-size: 24px;
-  }
-}
-
-.about-info {
-  grid-template-areas:
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
-
-  grid-template-columns: 1fr;
-}
-
-.projects {
-  grid-template-columns: repeat(2, 1fr);
 }
 
 // Smartphones //////////////////////////////////////////
 @include mediaSm {
-  // Menu Button
-
-  .top {
-    z-index: 100;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    background: #000;
-    height: 4rem;
-    overflow: hidden;
-    display: block;
-    transition: top 1s;
-
-    .name {
-      a {
-        left: 25px;
-        top: 16px;
-        font-size: 20px;
-        position: absolute;
-      }
-    }
-
-    .menu-btn {
-      z-index: 3;
-      right: 30px;
-      top: 22px;
-      position: absolute;
-      cursor: pointer;
-      @include easeOut;
-
-      .btn-line {
-        width: 28px;
-        height: 3px;
-        margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        @include easeOut;
-      }
-
-      // Rotate Into X With Menu Lines
-      &.close {
-        transform: rotate(180deg);
-
-        .btn-line {
-          // Line 1 - Rotate
-          &:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-          }
-
-          // Line 2 - Hide
-          &:nth-child(2) {
-            opacity: 0;
-          }
-
-          // Line 3 - Rotate
-          &:nth-child(3) {
-            transform: rotate(-45deg) translate(6.5px, -6.5px);
-          }
-        }
-      }
-    } /////btn-end//////////////
-  }
-
-  section {
-    float: left;
-    text-align: center;
-
-    .first-heading {
-      padding-top: 20vh;
-      font-size: 3rem;
-      font-weight: 500;
-      color: #e8eddf;
-    }
-
-    .lg-heading {
-      font-size: 4rem;
-      font-weight: 550;
-      line-height: 120%;
-      letter-spacing: 0.15rem;
-    }
-
-    .sm-heading {
-      padding-top: 1rem;
-      font-size: 1.75rem;
-      font-weight: 400;
-      color: #e8eddf;
-    }
-
-    .grid-container {
-      display: grid;
-      grid-gap: 0.7rem;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-        0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-    .skill-item {
-      font-size: 30px;
-      padding: 1rem 0;
-      text-align: center;
-
-      .skill-img3 {
-        margin-top: 1.5rem;
-      }
-      .skill-img5 {
-        margin-top: 1rem;
-      }
-      .skill-img6 {
-        margin-top: 0.7rem;
-      }
-
-      img {
-        max-width: 60px;
-        height: auto;
-      }
-    }
-  }
-
-  // Menu Overlay
-  .menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    opacity: 1;
-    visibility: hidden;
-    height: 100vh;
-
-    &.show {
-      visibility: visible;
-    }
-
-    &-nav {
-      display: flex;
-      flex-flow: column wrap;
-      align-items: center;
-      justify-content: center;
-      float: left;
-      width: 100%;
-      height: 100vh;
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      //background: darken($primary-color, 5);
-      background: #111111;
-      list-style: none;
-      transform: translate3d(100%, 0, 0);
-      @include easeOut;
-
-      &.show {
-        // Slide in from top
-        transform: translate3d(0, 0, 0);
-      }
-    }
-
-    .nav-item {
-      transform: translate3d(3000px, 0, 0);
-      @include easeOut;
-
-      &.show {
-        // Slide in from right
-        transform: translate3d(0, 0, 0);
-      }
-
-      &.current > a {
-        color: $secondary-color;
-      }
-    }
-
-    .nav-link {
-      display: inline-block;
-      position: relative;
-      font-size: 30px;
-      text-transform: uppercase;
-      padding: 1rem 0;
-      font-weight: 300;
-      color: set-text-color($primary-color);
-      text-decoration: none;
-      @include easeOut;
-
-      &:hover {
-        color: $secondary-color;
-      }
-    }
-  }
-
-  .projects {
-    grid-template-columns: 1fr;
-  }
-
   footer {
     p {
       font-size: 13px;
     }
+  }
+  section {
+    .skills-container {
+      margin: 0;
+    }
+    &#work,
+    &#contact,
+    &#skills,
+    &#about {
+      .second {
+        margin: 0;
+      }
+      p {
+        margin: 2rem 2rem;
+      }
+    }
+  }
+  .projects {
+    grid-template-columns: 100%;
+    margin: 0;
   }
 }

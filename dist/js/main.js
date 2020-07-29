@@ -98,14 +98,10 @@ function smoothScroll(target, duration) {
 
 var link_down = document.querySelector('#link0');
 link_down.addEventListener('click', function () {
-  hideMenu();
-  enableScrolling();
   smoothScroll('#about', 2500);
 });
 var link_home = document.querySelector('#link1');
 link_home.addEventListener('click', function () {
-  hideMenu();
-  enableScrolling();
   smoothScroll('#home', 2500);
 });
 var link_about = document.querySelector('#link2');
