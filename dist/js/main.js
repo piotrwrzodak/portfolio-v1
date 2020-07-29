@@ -128,3 +128,28 @@ link_contact.addEventListener('click', function () {
   enableScrolling();
   smoothScroll('#contact', 2500);
 });
+
+// change active section
+const changeNav = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+      document.querySelector('.active').classList.remove('active');
+
+      var id = entry.target.getAttribute('id');
+      var newLink = document
+        .querySelector(`[href="#${id}"]`)
+        .classList.add('active');
+    }
+  });
+};
+
+const options = {
+  threshold: 0.55,
+};
+
+const observer = new IntersectionObserver(changeNav, options);
+
+const sections = document.querySelectorAll('section');
+sections.forEach((section) => {
+  observer.observe(section);
+});

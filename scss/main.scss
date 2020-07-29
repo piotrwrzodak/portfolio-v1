@@ -16,6 +16,14 @@ body {
 a {
   color: #fff;
   text-decoration: none;
+  transition: 1s;
+
+  &.active {
+    color: $secondary-color;
+  }
+  &:hover {
+    color: $secondary-color;
+  }
 }
 
 p {
