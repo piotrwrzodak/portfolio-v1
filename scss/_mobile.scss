@@ -6,6 +6,9 @@
     .name {
       display: flex;
       align-items: center;
+      a {
+        left: 60px;
+      }
     }
     .menu-btn {
       display: none;
@@ -26,6 +29,10 @@
         .nav-link {
           text-decoration: none;
           padding: 0 3.5rem 0 3.5rem;
+
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 1.5px;
         }
       }
     }
@@ -63,6 +70,10 @@
     .name {
       display: flex;
       align-items: center;
+
+      a {
+        left: 50px;
+      }
     }
     .menu-btn {
       display: none;
@@ -83,6 +94,9 @@
         .nav-link {
           text-decoration: none;
           padding: 0 2rem 0 2.75rem;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 1.5px;
         }
       }
     }
@@ -121,6 +135,13 @@
 
 // Tablets & Small Laptops//////////////////////////
 @include mediaMd {
+  .top {
+    .name {
+      a {
+        left: 50px;
+      }
+    }
+  }
   /////////////////////////// Menu Overlay
   .menu {
     position: fixed;
@@ -173,9 +194,11 @@
     .nav-link {
       display: inline-block;
       position: relative;
-      font-size: 30px;
+
       text-transform: uppercase;
-      padding: 1rem 0;
+      font-size: 2em;
+      padding: 3rem 0;
+      letter-spacing: 5px;
       font-weight: 300;
       color: set-text-color($primary-color);
       text-decoration: none;
@@ -281,9 +304,10 @@
     .nav-link {
       display: inline-block;
       position: relative;
-      font-size: 30px;
       text-transform: uppercase;
-      padding: 1rem 0;
+      font-size: 2em;
+      padding: 3rem 0;
+      letter-spacing: 5px;
       font-weight: 300;
       color: set-text-color($primary-color);
       text-decoration: none;

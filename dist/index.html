@@ -19,7 +19,7 @@
     <header>
       <div class="top">
         <div class="name">
-          <a href="index.html" class="nav-link">
+          <a href="index.html" class="nav-link nav-item active">
             Piotr Wrzodak
           </a>
         </div>
@@ -28,7 +28,7 @@
         <nav class="menu">
           <ul class="menu-nav">
             <li class="nav-item">
-              <a href="#about" id="link2" class="nav-link active">
+              <a href="#about" id="link2" class="nav-link ">
                 About
               </a>
             </li>
@@ -97,7 +97,7 @@
         I've been doing web development for about 1 year now, and I'm always
         eager to learn more in this fast paced industry.
       </p>
-      <p>Some technologies I have worked with:</p>
+      <p class="cap">Some technologies I have worked with</p>
       <div class="skills-container">
         <div class="grid-container">
           <div class="skill-item">
@@ -128,19 +128,17 @@
           <div class="skill-item">
             <img class="skill-img9" src="./img/skills/github.png" />
           </div>
-          <!-- <div class="skill-item">
-          <img class="skill-img10" src="./img/skills/linux.png" />
-        </div> -->
         </div>
       </div>
     </section>
     <!-- //////////////////// W O R K  /////////////////////////-->
     <section id="work">
       <h2><span>My Work</span></h2>
+      <p class="cap">Some Things I've Built</p>
       <div class="projects">
         <div class="project">
           <a href="#!">
-            <img src="https://via.placeholder.com/161x100" alt="Project" />
+            <img src="./img/portfolio.jpg" alt="Project" />
           </a>
           <a href="#" class="btn-light"> <i class="fas fa-eye"></i> Project </a>
           <a
@@ -157,6 +155,23 @@
     <!-- //////////////////// C O N T A C T  /////////////////////////-->
     <section id="contact">
       <h2><span>Contact</span></h2>
+      <p>
+        Whether you have an idea for a project or just want to chat, feel free
+        to shoot me an email!
+      </p>
+      <div class="contact-form">
+        <form name="contact" method="POST" data-netlify="true">
+          
+            <label>Name </label>
+            <input id="input-field" type="text" name="name" />
+            <label>Email </label>
+            <input id="input-field" type="text" name="email" />
+            <label>Message </label>
+            <textarea id="input-field" name="message"></textarea>
+            <input type="submit" value="Send" class="btn-dark-send"></input>
+          
+        </form>
+      </div>
     </section>
     <!-- //////////////////// F O O T E R /////////////////////////-->
     <footer>
@@ -167,22 +182,21 @@
         <ul>
           <li>
             <a href="#!" target="_blank">
-              <i class="fab fa-facebook fa-2x"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#!" target="_blank">
               <i class="fab fa-linkedin fa-2x"></i>
             </a>
           </li>
           <li>
             <a href="https://github.com/piotrwrzodak/" target="_blank">
-              <i class="fab fa-github fa-2x"></i>
+              <i class="fab fa-github-square fa-2x"></i> 
+            </a>
+          </li>
+          <li>
+            <a href="#!" target="_blank">
+              <i class="fab fa-facebook fa-2x"></i>
             </a>
           </li>
         </ul>
       </div>
-
       <p>&copy; Piotr Wrzodak 2020</p>
     </footer>
 
