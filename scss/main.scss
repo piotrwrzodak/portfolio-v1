@@ -160,6 +160,7 @@ header {
 
 //////////////////////// SECTION HOME
 section {
+  @include easeOut;
   width: 100%;
   padding: 1.7rem;
 

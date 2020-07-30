@@ -153,3 +153,12 @@ const sections = document.querySelectorAll('section.section');
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// Scroll reveal
+window.sr = ScrollReveal();
+
+sr.reveal('.scroll-show', {
+  move: 0,
+  duration: 1200,
+  delay: 400,
+});

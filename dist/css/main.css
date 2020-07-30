@@ -137,6 +137,7 @@ header {
     width: 200px; }
 
 section {
+  transition: all 0.5s ease-out;
   width: 100%;
   padding: 1.7rem;
   height: auto;
@@ -408,7 +409,14 @@ footer {
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 10rem; }
   section#work p, section#contact p, section#skills p, section#about p {
-    margin: 2rem 10rem; } }
+    margin: 2rem 11rem; }
+  section .grid-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-rows: auto; }
+    section .grid-container .skill-item {
+      padding: 2rem 0; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .top {
