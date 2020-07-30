@@ -5,7 +5,7 @@
 }
 
 body {
-  background: $primary-color;
+  background: #fff;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
@@ -42,6 +42,10 @@ header {
 
 .text-secondary {
   color: $secondary-color;
+}
+
+.nav-link {
+  outline-color: black;
 }
 
 ////////////// NAV
@@ -122,14 +126,43 @@ header {
     }
   }
 }
+#cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 50px;
+  padding: 50px;
+  height: 300px;
+  flex-direction: column;
+
+  width: 100%;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../img/resume-bg.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+
+  h1 {
+    margin-top: 0;
+    font-size: 2.25rem;
+  }
+
+  .btn-resume {
+    @extend .btn;
+    background-color: #fff;
+    color: #000;
+    width: 200px;
+  }
+}
 
 //////////////////////// SECTION HOME
 section {
   width: 100%;
   padding: 1.7rem;
-  // height: 100%;
-  //min-height: calc(100vh - 60px);
-  min-height: 70vh;
+
   height: auto;
   h5 {
     margin-top: 15vh;
@@ -186,12 +219,14 @@ section {
       padding-top: 10vh;
     }
   }
+
   /////////////////////// SECTION HEADING LINES
 
   &#work,
   &#contact,
   &#skills,
   &#about {
+    min-height: 60vh;
     p {
       margin: 2rem 7rem;
     }
@@ -203,8 +238,9 @@ section {
     background-color: #fff;
     color: #000;
     h2 {
-      font-size: 1.75rem;
-      padding-bottom: 2rem;
+      font-size: 2.25rem;
+
+      padding-bottom: 1rem;
       display: grid;
       width: 100%;
       align-items: center;
@@ -286,6 +322,7 @@ section {
   img {
     padding: 0.5rem;
     width: 100%;
+    cursor: auto;
   }
 }
 
@@ -293,7 +330,7 @@ section {
 .btn {
   display: block;
   padding: 0.5rem 1rem;
-
+  cursor: pointer;
   transition: 0.3s ease-in;
 
   &:hover {

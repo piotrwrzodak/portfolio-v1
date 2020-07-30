@@ -149,7 +149,7 @@ const options = {
 
 const observer = new IntersectionObserver(changeNav, options);
 
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section.section');
 sections.forEach((section) => {
   observer.observe(section);
 });
