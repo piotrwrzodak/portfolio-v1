@@ -142,6 +142,10 @@
       }
     }
   }
+  .grey-transform {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+  }
   /////////////////////////// Menu Overlay
   .menu {
     position: fixed;
@@ -253,6 +257,10 @@
 // Smartphones //////////////////////////////////////////
 @include mediaSm {
   /////////////////////////// Menu Overlay
+  .grey-transform {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+  }
   .menu {
     position: fixed;
     top: 0;

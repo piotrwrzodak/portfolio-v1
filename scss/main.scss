@@ -220,6 +220,16 @@ section {
     }
   }
 }
+.grey-transform {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  transition: 0.3s ease-in;
+
+  &:hover {
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+  }
+}
 
 //////////////////////////SECTION   MAIN HEADINGS  SKILLS
 section {
