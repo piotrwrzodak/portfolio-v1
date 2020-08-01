@@ -30,7 +30,6 @@
   box-sizing: border-box; }
 
 body {
-  background: #fff;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -84,13 +83,13 @@ header {
     top: 22px;
     position: absolute;
     cursor: pointer;
-    transition: all 0.5s ease-out; }
+    transition: 0.5s ease-out; }
     .top .menu-btn .btn-line {
       width: 28px;
       height: 3px;
       margin: 0 0 5px 0;
       background: #fff;
-      transition: all 0.5s ease-out; }
+      transition: 0.5s ease-out; }
     .top .menu-btn.close {
       transform: rotate(180deg); }
       .top .menu-btn.close .btn-line:nth-child(1) {
@@ -104,8 +103,7 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  -ms-flex-align: center;
-      align-items: center; }
+  align-items: center; }
   #about .wrapper .profile {
     max-width: 200px;
     height: auto;
@@ -114,18 +112,14 @@ header {
     border-width: 0.5px; }
 
 #cv {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 50px;
   padding: 50px;
   height: 300px;
-  -ms-flex-direction: column;
-      flex-direction: column;
+  flex-direction: column;
   width: 100%;
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/resume-bg.jpg") no-repeat center;
@@ -142,7 +136,7 @@ header {
     width: 200px; }
 
 section {
-  transition: all 0.5s ease-out;
+  transition: 0.5s ease-out;
   width: 100%;
   padding: 1.7rem;
   height: auto;
@@ -182,8 +176,7 @@ section {
     height: 100vh;
     color: #fff; }
     section#home .to-about {
-      -ms-flex-align: center;
-          align-items: center;
+      align-items: center;
       text-align: center;
       animation: down 2s infinite;
       color: #fff;
@@ -202,8 +195,7 @@ section {
       padding-bottom: 1rem;
       display: grid;
       width: 100%;
-      -ms-flex-align: center;
-          align-items: center;
+      align-items: center;
       text-align: center;
       grid-template-columns: minmax(15px, 1fr) auto minmax(15px, 1fr);
       grid-gap: 20px; }
@@ -254,10 +246,8 @@ section .skill-item {
   grid-gap: 0.7rem;
   grid-template-columns: 40%;
   grid-template-rows: auto;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center; }
+  justify-content: center;
+  align-content: center; }
   .projects .project {
     padding: 1rem 0.6rem;
     border: solid 2px;
@@ -328,8 +318,7 @@ footer {
   bottom: 0; }
   footer .to-top {
     padding-top: 0.5rem;
-    -ms-flex-align: center;
-        align-items: center;
+    align-items: center;
     text-align: center;
     animation: up 2s infinite; }
   footer .icons {
@@ -338,8 +327,7 @@ footer {
       list-style-type: none;
       margin: 0;
       padding: 1rem 0;
-      -ms-flex-align: center;
-          align-items: center;
+      align-items: center;
       width: 100%;
       text-align: center; }
       footer .icons ul li {
@@ -351,7 +339,7 @@ footer {
         /*IE7*/ }
         footer .icons ul li a {
           font-size: 14px;
-          transition: all 0.5s ease-out; }
+          transition: 0.5s ease-out; }
           footer .icons ul li a:hover {
             color: #372b9c; }
 
@@ -385,33 +373,25 @@ footer {
 
 @media screen and (min-width: 1171px) {
   .top {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center; }
+    justify-content: space-between;
+    align-items: center; }
     .top .name {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
+      align-items: center; }
       .top .name a {
         left: 60px; }
     .top .menu-btn {
       display: none; }
     .top .menu {
       right: 0; }
-      .top .menu .menu-nav {
-        display: -ms-flexbox;
+      .top .menu .nav {
         display: flex;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-        -ms-flex-align: center;
-            align-items: center;
+        justify-content: space-around;
+        align-items: center;
         width: 80%;
         list-style: none; }
-        .top .menu .menu-nav .nav-link {
+        .top .menu .nav .nav-link {
           text-decoration: none;
           padding: 0 3.5rem 0 3.5rem;
           font-size: 18px;
@@ -439,33 +419,25 @@ footer {
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .top {
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: center;
-        align-items: center; }
+    justify-content: space-between;
+    align-items: center; }
     .top .name {
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
+      align-items: center; }
       .top .name a {
         left: 50px; }
     .top .menu-btn {
       display: none; }
     .top .menu {
       right: 0; }
-      .top .menu .menu-nav {
-        display: -ms-flexbox;
+      .top .menu .nav {
         display: flex;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-        -ms-flex-align: center;
-            align-items: center;
+        justify-content: space-around;
+        align-items: center;
         width: 80%;
         list-style: none; }
-        .top .menu .menu-nav .nav-link {
+        .top .menu .nav .nav-link {
           text-decoration: none;
           padding: 0 2rem 0 2.75rem;
           font-size: 18px;
@@ -502,15 +474,11 @@ footer {
     height: 100vh; }
     .menu.show {
       visibility: visible; }
-    .menu-nav {
-      display: -ms-flexbox;
+    .menu .nav {
       display: flex;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
       float: left;
       width: 100%;
       height: 100vh;
@@ -520,12 +488,12 @@ footer {
       background: #111111;
       list-style: none;
       transform: translateX(100%);
-      transition: all 0.5s ease-out; }
-      .menu-nav.show {
+      transition: 0.5s ease-out; }
+      .menu .nav.show {
         transform: translateX(0); }
     .menu .nav-item {
       transform: translateX(100%);
-      transition: all 0.5s ease-out; }
+      transition: 0.5s ease-out; }
       .menu .nav-item.show {
         transform: translateX(0); }
       .menu .nav-item.current > a {
@@ -540,7 +508,7 @@ footer {
       font-weight: 300;
       color: #fff;
       text-decoration: none;
-      transition: all 0.5s ease-out; }
+      transition: 0.5s ease-out; }
       .menu .nav-link:hover {
         color: #372b9c; }
   .big-h {
@@ -574,15 +542,11 @@ footer {
     height: 100vh; }
     .menu.show {
       visibility: visible; }
-    .menu-nav {
-      display: -ms-flexbox;
+    .menu .nav {
       display: flex;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      flex-flow: column wrap;
+      align-items: center;
+      justify-content: center;
       float: left;
       width: 100%;
       height: 100vh;
@@ -592,12 +556,12 @@ footer {
       background: #111111;
       list-style: none;
       transform: translateX(100%);
-      transition: all 0.5s ease-out; }
-      .menu-nav.show {
+      transition: 0.5s ease-out; }
+      .menu .nav.show {
         transform: translateX(0); }
     .menu .nav-item {
       transform: translateX(100%);
-      transition: all 0.5s ease-out; }
+      transition: 0.5s ease-out; }
       .menu .nav-item.show {
         transform: translateX(0); }
       .menu .nav-item.current > a {
@@ -612,7 +576,7 @@ footer {
       font-weight: 300;
       color: #fff;
       text-decoration: none;
-      transition: all 0.5s ease-out; }
+      transition: 0.5s ease-out; }
       .menu .nav-link:hover {
         color: #372b9c; }
   .big-h {
