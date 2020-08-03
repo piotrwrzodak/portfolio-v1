@@ -218,8 +218,7 @@ section {
     -webkit-filter: grayscale(0%); }
 
 section .skills-container {
-  margin: 3rem 7rem 0 7rem;
-  background: khaki; }
+  margin: 3rem 7rem 0 7rem; }
 
 section .grid-container {
   display: grid;
