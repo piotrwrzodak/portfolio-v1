@@ -34,7 +34,8 @@ body {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  background-color: #fff; }
 
 a {
   color: #fff;
@@ -168,7 +169,7 @@ section {
     animation: fadeDown 2s; }
   section#home {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/home.jpg");
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;

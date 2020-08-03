@@ -10,6 +10,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  background-color: #fff;
 }
 
 a {
@@ -202,10 +203,11 @@ section {
   &#home {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('../img/home.jpg');
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
     position: relative;
     width: 100%;
     height: 100vh;
