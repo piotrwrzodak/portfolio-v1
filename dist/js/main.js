@@ -45,30 +45,28 @@ function disableScrolling() {
   };
 }
 
+// Different style of menu depending on width
 function enableScrolling() {
   // Hide Navbar on Scroll Down
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
-    if (prevScrollpos > currentScrollPos) {
+    if (x.matches) {
       document.querySelector('.top').style.top = '0';
     } else {
-      document.querySelector('.top').style.top = '-8rem';
+      if (prevScrollpos > currentScrollPos) {
+        document.querySelector('.top').style.top = '0';
+      } else {
+        document.querySelector('.top').style.top = '-8rem';
+      }
+      prevScrollpos = currentScrollPos;
     }
-    prevScrollpos = currentScrollPos;
   };
 }
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector('.top').style.top = '0';
-  } else {
-    document.querySelector('.top').style.top = '-8rem';
-  }
-  prevScrollpos = currentScrollPos;
-};
+var x = window.matchMedia('(max-width: 768px)');
+enableScrolling(x);
+x.addListener(enableScrolling);
 
 // Scroll to id
 function smoothScroll(target, duration) {
