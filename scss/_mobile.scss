@@ -2,6 +2,9 @@
 
 // Widescreens///////////////////////////////////////
 @include mediaXl {
+  #cv {
+    background-attachment: fixed;
+  }
   .top {
     .name {
       display: flex;
@@ -61,6 +64,9 @@
         margin: 2rem 11rem;
       }
     }
+    &#home {
+      background-attachment: fixed;
+    }
     .grid-container {
       grid-template-columns: 1fr 1fr 1fr 1fr;
       display: grid;
@@ -76,6 +82,9 @@
 
 // Desktops & Laptops////////////////////////////////
 @include mediaLg {
+  #cv {
+    background-attachment: fixed;
+  }
   .top {
     .name {
       display: flex;
@@ -140,11 +149,17 @@
         margin: 2rem 6rem;
       }
     }
+    &#home {
+      background-attachment: fixed;
+    }
   }
 }
 
 // Tablets & Small Laptops//////////////////////////
 @include mediaMd {
+  #cv {
+    background-attachment: scroll;
+  }
   .top {
     .name {
       a {
@@ -245,6 +260,9 @@
         margin: 2rem 4rem;
       }
     }
+    &#home {
+      background-attachment: scroll;
+    }
 
     ul.menu-nav {
       float: none;
@@ -260,6 +278,9 @@
 
 // Smartphones //////////////////////////////////////////
 @include mediaSm {
+  #cv {
+    background-attachment: scroll;
+  }
   /////////////////////////// Menu Overlay
   .grey-transform {
     filter: grayscale(0%);
@@ -352,6 +373,10 @@
       p {
         margin: 2rem 2rem;
       }
+    }
+
+    &#home {
+      background-attachment: scroll;
     }
   }
   .projects {
