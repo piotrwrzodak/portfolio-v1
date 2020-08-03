@@ -202,7 +202,8 @@ section {
   &#home {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
       url('../img/home.jpg');
-    background-attachment: fixed;
+    background-attachment: scroll;
+    background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
