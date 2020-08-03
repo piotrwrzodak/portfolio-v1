@@ -124,7 +124,6 @@ header {
   width: 100%;
   color: #fff;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/resume-bg.jpg") no-repeat center;
-  background-attachment: fixed;
   background-size: cover;
   position: relative;
   background-repeat: no-repeat; }
@@ -140,6 +139,7 @@ section {
   transition: 0.5s ease-out;
   width: 100%;
   padding: 1.7rem;
+  position: relative;
   height: auto;
   float: left;
   text-align: center; }
@@ -169,11 +169,9 @@ section {
     animation: fadeDown 2s; }
   section#home {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/home.jpg");
-    background-attachment: fixed;
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
-    position: relative;
     width: 100%;
     height: 100vh;
     color: #fff; }
@@ -374,6 +372,8 @@ footer {
     transform: translateY(1rem); } }
 
 @media screen and (min-width: 1171px) {
+  #cv {
+    background-attachment: fixed; }
   .top {
     display: flex;
     justify-content: space-between;
@@ -411,6 +411,8 @@ footer {
     margin: 0 10rem; }
   section#work p, section#contact p, section#skills p, section#about p {
     margin: 2rem 11rem; }
+  section#home {
+    background-attachment: fixed; }
   section .grid-container {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     display: grid;
@@ -420,6 +422,8 @@ footer {
       padding: 2rem 0; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  #cv {
+    background-attachment: fixed; }
   .top {
     display: flex;
     justify-content: space-between;
@@ -459,9 +463,13 @@ footer {
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 6rem; }
   section#work p, section#contact p, section#skills p, section#about p {
-    margin: 2rem 6rem; } }
+    margin: 2rem 6rem; }
+  section#home {
+    background-attachment: fixed; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
+  #cv {
+    background-attachment: scroll; }
   .top .name a {
     left: 50px; }
   .grey-transform {
@@ -524,6 +532,8 @@ footer {
     margin: 0 2rem; }
   section#work p, section#contact p, section#skills p, section#about p {
     margin: 2rem 4rem; }
+  section#home {
+    background-attachment: scroll; }
   section ul.menu-nav {
     float: none;
     width: 100%;
@@ -532,6 +542,8 @@ footer {
       transform: translateX(0); } }
 
 @media screen and (max-width: 500px) {
+  #cv {
+    background-attachment: scroll; }
   .grey-transform {
     filter: grayscale(0%);
     -webkit-filter: grayscale(0%); }
@@ -591,6 +603,8 @@ footer {
     margin: 0; }
   section#work p, section#contact p, section#skills p, section#about p {
     margin: 2rem 2rem; }
+  section#home {
+    background-attachment: scroll; }
   .projects {
     grid-template-columns: 100%;
     margin: 0; } }
