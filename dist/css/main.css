@@ -64,9 +64,7 @@ header {
   outline-color: black; }
 
 .top {
-  z-index: 100;
   top: 0;
-  position: fixed;
   width: 100%;
   background: #000;
   height: 4rem;
@@ -79,7 +77,6 @@ header {
     font-size: 20px;
     position: absolute; }
   .top .menu-btn {
-    z-index: 3;
     right: 30px;
     top: 22px;
     position: absolute;
@@ -332,11 +329,7 @@ footer {
       text-align: center; }
       footer .icons ul li {
         display: inline-block;
-        padding: 0.3rem 1rem;
-        *display: inline;
-        /*IE7*/
-        *zoom: 1;
-        /*IE7*/ }
+        padding: 0.3rem 1rem; }
         footer .icons ul li a {
           font-size: 14px;
           transition: 0.5s ease-out; }
