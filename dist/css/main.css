@@ -336,6 +336,19 @@ footer {
           footer .icons ul li a:hover {
             color: #372b9c; }
 
+#loading {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  background-image: url("../img/balls.gif");
+  background-repeat: no-repeat;
+  background-position: center; }
+
 @keyframes fadeDown {
   0% {
     opacity: 0;
