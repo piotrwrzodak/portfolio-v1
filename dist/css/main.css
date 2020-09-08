@@ -180,7 +180,6 @@ section {
       font-size: 1.3rem;
       padding-top: 10vh; }
   section#work, section#contact, section#skills, section#about {
-    min-height: 60vh;
     background-color: #fff;
     color: #000; }
     section#work p, section#contact p, section#skills p, section#about p {
@@ -240,19 +239,39 @@ section .skill-item {
 .projects {
   margin: 0 7rem 0 7rem;
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1.5rem;
   grid-template-columns: 40%;
   grid-template-rows: auto;
   justify-content: center;
   align-content: center; }
   .projects .project {
-    padding: 1rem 0.6rem;
+    padding: 0rem 0.6rem 1rem 0.6rem;
     border: solid 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .projects .project .project-icon {
+      padding: 0 0.5rem; }
+    .projects .project .project-icon ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0rem;
+      padding: 0; }
+      .projects .project .project-icon ul i {
+        color: black; }
+  .projects .project-img {
+    padding: 0 0.5rem;
+    text-align: center;
+    margin: auto; }
   .projects img {
-    padding: 0.5rem;
     width: 100%;
-    cursor: auto; }
+    cursor: pointer;
+    border: 2px solid #000;
+    filter: brightness(85%);
+    transition: 0.5s ease-out; }
+  .projects img:hover {
+    filter: brightness(100%); }
+  .projects h1 {
+    letter-spacing: 1.5px; }
 
 .btn, #cv .btn-resume, .btn-dark, .btn-light, .btn-dark-send {
   display: block;
@@ -269,7 +288,7 @@ section .skill-item {
   margin: 0.5rem; }
 
 .btn-light {
-  background: #c4c4c4;
+  background: #dddddd;
   color: #333;
   margin: 0.5rem; }
 
@@ -403,6 +422,10 @@ footer {
           font-size: 18px;
           font-weight: 500;
           letter-spacing: 1.5px; }
+  .projects {
+    grid-template-columns: 40% 40%;
+    grid-gap: 3rem;
+    margin: 0 4rem; }
   .small-h {
     display: none; }
   section .first-heading {
@@ -456,7 +479,8 @@ footer {
   .small-h {
     display: none; }
   .projects {
-    grid-template-columns: 55%;
+    grid-template-columns: 40% 40%;
+    grid-gap: 3rem;
     margin: 0 4rem; }
   section .skills-container {
     margin: 0 4rem; }
@@ -530,6 +554,8 @@ footer {
   .projects {
     grid-template-columns: 75%;
     margin: 0 2rem; }
+    .projects .project img {
+      filter: brightness(100%); }
   section .skills-container {
     margin: 0 2rem; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
@@ -611,4 +637,6 @@ footer {
     background-attachment: scroll; }
   .projects {
     grid-template-columns: 100%;
-    margin: 0; } }
+    margin: 0; }
+    .projects .project img {
+      filter: brightness(100%); } }

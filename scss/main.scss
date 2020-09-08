@@ -162,8 +162,8 @@ section {
   width: 100%;
   padding: 1.7rem;
   position: relative;
-
   height: auto;
+
   h5 {
     margin-top: 15vh;
   }
@@ -226,7 +226,7 @@ section {
   &#contact,
   &#skills,
   &#about {
-    min-height: 60vh;
+    //min-height: 60vh;
     p {
       margin: 2rem 7rem;
     }
@@ -304,25 +304,54 @@ section {
 }
 
 /////////////////// Projects
+
 .projects {
   margin: 0 7rem 0 7rem;
   display: grid;
-  grid-gap: 0.7rem;
+  grid-gap: 1.5rem;
   grid-template-columns: 40%;
   grid-template-rows: auto;
   justify-content: center;
   align-content: center;
 
   .project {
-    padding: 1rem 0.6rem;
+    padding: 0rem 0.6rem 1rem 0.6rem;
     border: solid 2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .project-icon {
+      padding: 0 0.5rem;
+    }
+    .project-icon ul {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      margin: 0rem;
+      padding: 0;
+
+      i {
+        color: black;
+      }
+    }
+  }
+  .project-img {
+    padding: 0 0.5rem;
+    text-align: center;
+    margin: auto;
   }
 
   img {
-    padding: 0.5rem;
     width: 100%;
-    cursor: auto;
+    cursor: pointer;
+    border: 2px solid #000;
+    filter: brightness(85%);
+    @include easeOut;
+  }
+  img:hover {
+    filter: brightness(100%);
+  }
+  h1 {
+    letter-spacing: 1.5px;
   }
 }
 
@@ -348,7 +377,7 @@ section {
 
 .btn-light {
   @extend .btn;
-  background: lighten($primary-color, 50);
+  background: lighten($primary-color, 60);
   color: #333;
   margin: 0.5rem;
 }

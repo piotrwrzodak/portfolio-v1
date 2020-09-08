@@ -46,27 +46,30 @@ function disableScrolling() {
 }
 
 // Different style of menu depending on width
+// function enableScrolling() {
+//   // Hide Navbar on Scroll Down
+//   var prevScrollpos = window.pageYOffset;
+//   window.onscroll = function () {
+//     var currentScrollPos = window.pageYOffset;
+//     if (x.matches) {
+//       document.querySelector('.top').style.top = '0';
+//     } else {
+//       if (prevScrollpos > currentScrollPos) {
+//         document.querySelector('.top').style.top = '0';
+//       } else {
+//         document.querySelector('.top').style.top = '-8rem';
+//       }
+//       prevScrollpos = currentScrollPos;
+//     }
+//   };
+// }
 function enableScrolling() {
-  // Hide Navbar on Scroll Down
-  var prevScrollpos = window.pageYOffset;
-  window.onscroll = function () {
-    var currentScrollPos = window.pageYOffset;
-    if (x.matches) {
-      document.querySelector('.top').style.top = '0';
-    } else {
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector('.top').style.top = '0';
-      } else {
-        document.querySelector('.top').style.top = '-8rem';
-      }
-      prevScrollpos = currentScrollPos;
-    }
-  };
+  window.onscroll = function () {};
 }
 
-var x = window.matchMedia('(max-width: 768px)');
-enableScrolling(x);
-x.addListener(enableScrolling);
+// var x = window.matchMedia('(max-width: 768px)');
+// enableScrolling(x);
+// x.addListener(enableScrolling);
 
 // Scroll to id
 function smoothScroll(target, duration) {
@@ -130,19 +133,22 @@ link_contact.addEventListener('click', function () {
 // change active section
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.55) {
+    //console.log(entry.isIntersecting, entry.intersectionRatio);
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
       document.querySelector('.active').classList.remove('active');
 
       var id = entry.target.getAttribute('id');
+
       var newLink = document
         .querySelector(`[href="#${id}"]`)
         .classList.add('active');
+      //console.log(id, `[href="#${id}"]`);
     }
   });
 };
 
 const options = {
-  threshold: 0.55,
+  threshold: 0.5,
 };
 
 const observer = new IntersectionObserver(changeNav, options);
