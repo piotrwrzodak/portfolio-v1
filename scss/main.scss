@@ -340,19 +340,24 @@ section {
     margin: auto;
   }
 
-  img {
+  .project-image {
     width: 100%;
     cursor: pointer;
     border: 2px solid #000;
     filter: brightness(85%);
     @include easeOut;
   }
-  img:hover {
+  .project-image:hover {
     filter: brightness(100%);
   }
   h1 {
     letter-spacing: 1.5px;
   }
+}
+
+.redux-icon {
+  height: 35px;
+  width: 35px;
 }
 
 ////////////////////////// Button Styles
