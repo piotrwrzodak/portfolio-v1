@@ -133,7 +133,7 @@ link_contact.addEventListener('click', function () {
 // change active section
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
-    console.log(entry.isIntersecting, entry.intersectionRatio);
+    //console.log(entry.isIntersecting, entry.intersectionRatio);
     if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
       document.querySelector('.active').classList.remove('active');
 
@@ -142,7 +142,7 @@ const changeNav = (entries, observer) => {
       var newLink = document
         .querySelector(`[href="#${id}"]`)
         .classList.add('active');
-      console.log(id, `[href="#${id}"]`);
+      //console.log(id, `[href="#${id}"]`);
     }
   });
 };
