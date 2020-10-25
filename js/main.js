@@ -133,8 +133,8 @@ link_contact.addEventListener('click', function () {
 // change active section
 const changeNav = (entries, observer) => {
   entries.forEach((entry) => {
-    //console.log(entry.isIntersecting, entry.intersectionRatio);
-    if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+    console.log(entry.isIntersecting, entry.intersectionRatio);
+    if (entry.isIntersecting && entry.intersectionRatio >= 0.45) {
       document.querySelector('.active').classList.remove('active');
 
       var id = entry.target.getAttribute('id');
@@ -142,13 +142,13 @@ const changeNav = (entries, observer) => {
       var newLink = document
         .querySelector(`[href="#${id}"]`)
         .classList.add('active');
-      //console.log(id, `[href="#${id}"]`);
+      console.log(id, `[href="#${id}"]`);
     }
   });
 };
 
 const options = {
-  threshold: 0.5,
+  threshold: 0.45,
 };
 
 const observer = new IntersectionObserver(changeNav, options);

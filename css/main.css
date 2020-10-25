@@ -262,16 +262,20 @@ section .skill-item {
     padding: 0 0.5rem;
     text-align: center;
     margin: auto; }
-  .projects img {
+  .projects .project-image {
     width: 100%;
     cursor: pointer;
     border: 2px solid #000;
     filter: brightness(85%);
     transition: 0.5s ease-out; }
-  .projects img:hover {
+  .projects .project-image:hover {
     filter: brightness(100%); }
   .projects h1 {
     letter-spacing: 1.5px; }
+
+.redux-icon {
+  height: 35px;
+  width: 35px; }
 
 .btn, #cv .btn-resume, .btn-dark, .btn-light, .btn-dark-send {
   display: block;
