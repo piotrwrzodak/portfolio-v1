@@ -171,8 +171,7 @@ section {
   float: left;
   text-align: center;
 
-  .first-heading {
-    padding-top: 20vh;
+  .big-h {
     font-size: 3rem;
     font-weight: 500;
     color: #e8eddf;
@@ -181,6 +180,7 @@ section {
   }
 
   .lg-heading {
+    padding-top: 20vh;
     font-size: 5rem;
     font-weight: 550;
     line-height: 120%;
@@ -399,14 +399,14 @@ section {
 .contact-form {
   margin: auto;
   display: block;
-  max-width: 600px;
   border: solid 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
+  line-height: 70%;
 
   input[type='text'],
   textarea {
-    width: 100%;
+    width: 60%;
     text-align: center;
     padding: 12px;
     border: 1px solid $secondary-color;
@@ -417,10 +417,6 @@ section {
     resize: vertical;
   }
 
-  .input-field {
-    width: 100%;
-    float: left;
-  }
   textarea {
     min-height: 100px;
   }

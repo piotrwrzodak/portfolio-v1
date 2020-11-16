@@ -46,19 +46,31 @@
     margin: 0 4rem;
   }
 
-  .small-h {
-    display: none;
-  }
   section {
-    .first-heading {
-      display: none;
-    }
     .lg-heading {
       padding-top: 30vh;
     }
+
+    .big-h {
+      font-size: 5rem;
+      font-weight: 550;
+      line-height: 120%;
+      letter-spacing: 0.15rem;
+      color: #fff;
+    }
+
+    .break-headings {
+      display: none;
+    }
+
     .skills-container {
       margin: 0 7rem;
     }
+
+    .contact-form {
+      margin: 0 7rem;
+    }
+
     &#work,
     &#contact,
     &#skills,
@@ -127,9 +139,6 @@
     }
   }
 
-  .small-h {
-    display: none;
-  }
   .projects {
     grid-template-columns: 40% 40%;
     grid-gap: 3rem;
@@ -139,12 +148,31 @@
     .skills-container {
       margin: 0 4rem;
     }
-    .first-heading {
-      display: none;
+    .contact-form {
+      margin: 0 4rem;
+
+      input[type='text'],
+      textarea {
+        width: 70%;
+      }
     }
+
     .lg-heading {
       padding-top: 30vh;
     }
+
+    .big-h {
+      font-size: 5rem;
+      font-weight: 550;
+      line-height: 120%;
+      letter-spacing: 0.15rem;
+      color: #fff;
+    }
+
+    .break-headings {
+      display: none;
+    }
+
     &#work,
     &#contact,
     &#skills,
@@ -245,9 +273,6 @@
       }
     }
   }
-  .big-h {
-    display: none;
-  }
   .projects {
     grid-template-columns: 75%;
     margin: 0 2rem;
@@ -262,6 +287,19 @@
     .skills-container {
       margin: 0 2rem;
     }
+    .contact-form {
+      margin: 0 2rem;
+
+      input[type='text'],
+      textarea {
+        width: 85%;
+      }
+    }
+
+    .lg-heading {
+      line-height: 100%;
+    }
+
     &#work,
     &#contact,
     &#skills,
@@ -364,9 +402,7 @@
       }
     }
   }
-  .big-h {
-    display: none;
-  }
+
   footer {
     p {
       font-size: 13px;
@@ -376,6 +412,19 @@
     .skills-container {
       margin: 0;
     }
+    .contact-form {
+      margin: 0;
+
+      input[type='text'],
+      textarea {
+        width: 100%;
+      }
+    }
+
+    .lg-heading {
+      line-height: 100%;
+    }
+
     &#work,
     &#contact,
     &#skills,
