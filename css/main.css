@@ -142,14 +142,14 @@ section {
   text-align: center; }
   section h5 {
     margin-top: 15vh; }
-  section .first-heading {
-    padding-top: 20vh;
+  section .big-h {
     font-size: 3rem;
     font-weight: 500;
     color: #e8eddf;
     margin: 0;
     animation: fadeDown 1s; }
   section .lg-heading {
+    padding-top: 20vh;
     font-size: 5rem;
     font-weight: 550;
     line-height: 120%;
@@ -304,13 +304,13 @@ section .skill-item {
 .contact-form {
   margin: auto;
   display: block;
-  max-width: 600px;
   border: solid 2px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  padding: 20px; }
+  padding: 20px;
+  line-height: 70%; }
   .contact-form input[type='text'],
   .contact-form textarea {
-    width: 100%;
+    width: 60%;
     text-align: center;
     padding: 12px;
     border: 1px solid #372b9c;
@@ -319,9 +319,6 @@ section .skill-item {
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical; }
-  .contact-form .input-field {
-    width: 100%;
-    float: left; }
   .contact-form textarea {
     min-height: 100px; }
   .contact-form label {
@@ -398,7 +395,7 @@ footer {
     opacity: 0;
     transform: translateY(1rem); } }
 
-@media screen and (min-width: 1171px) {
+@media screen and (min-width: 1170px) {
   #cv {
     background-attachment: fixed; }
   .top {
@@ -430,13 +427,19 @@ footer {
     grid-template-columns: 40% 40%;
     grid-gap: 3rem;
     margin: 0 4rem; }
-  .small-h {
-    display: none; }
-  section .first-heading {
-    display: none; }
   section .lg-heading {
     padding-top: 30vh; }
+  section .big-h {
+    font-size: 5rem;
+    font-weight: 550;
+    line-height: 120%;
+    letter-spacing: 0.15rem;
+    color: #fff; }
+  section .break-headings {
+    display: none; }
   section .skills-container {
+    margin: 0 7rem; }
+  section .contact-form {
     margin: 0 7rem; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 10rem; }
@@ -480,18 +483,27 @@ footer {
           font-size: 18px;
           font-weight: 500;
           letter-spacing: 1.5px; }
-  .small-h {
-    display: none; }
   .projects {
     grid-template-columns: 40% 40%;
     grid-gap: 3rem;
     margin: 0 4rem; }
   section .skills-container {
     margin: 0 4rem; }
-  section .first-heading {
-    display: none; }
+  section .contact-form {
+    margin: 0 4rem; }
+    section .contact-form input[type='text'],
+    section .contact-form textarea {
+      width: 70%; }
   section .lg-heading {
     padding-top: 30vh; }
+  section .big-h {
+    font-size: 5rem;
+    font-weight: 550;
+    line-height: 120%;
+    letter-spacing: 0.15rem;
+    color: #fff; }
+  section .break-headings {
+    display: none; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 6rem; }
   section#work p, section#contact p, section#skills p, section#about p {
@@ -499,7 +511,7 @@ footer {
   section#home {
     background-attachment: fixed; } }
 
-@media screen and (min-width: 501px) and (max-width: 768px) {
+@media screen and (min-width: 500px) and (max-width: 769px) {
   #cv {
     background-attachment: scroll; }
   .top .name a {
@@ -553,8 +565,6 @@ footer {
       transition: 0.5s ease-out; }
       .menu .nav-link:hover {
         color: #372b9c; }
-  .big-h {
-    display: none; }
   .projects {
     grid-template-columns: 75%;
     margin: 0 2rem; }
@@ -562,6 +572,13 @@ footer {
       filter: brightness(100%); }
   section .skills-container {
     margin: 0 2rem; }
+  section .contact-form {
+    margin: 0 2rem; }
+    section .contact-form input[type='text'],
+    section .contact-form textarea {
+      width: 85%; }
+  section .lg-heading {
+    line-height: 100%; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0 2rem; }
   section#work p, section#contact p, section#skills p, section#about p {
@@ -627,12 +644,17 @@ footer {
       transition: 0.5s ease-out; }
       .menu .nav-link:hover {
         color: #372b9c; }
-  .big-h {
-    display: none; }
   footer p {
     font-size: 13px; }
   section .skills-container {
     margin: 0; }
+  section .contact-form {
+    margin: 0; }
+    section .contact-form input[type='text'],
+    section .contact-form textarea {
+      width: 100%; }
+  section .lg-heading {
+    line-height: 100%; }
   section#work .second, section#contact .second, section#skills .second, section#about .second {
     margin: 0; }
   section#work p, section#contact p, section#skills p, section#about p {
