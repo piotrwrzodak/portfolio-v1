@@ -1,12 +1,9 @@
-// Select DOM Items
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.nav');
 const navItems = document.querySelectorAll('.nav-item');
 
-// Set Initial State Of Menu
 let show = false;
-
 menuBtn.addEventListener('click', toggleMenu);
 
 function toggleMenu() {
@@ -23,7 +20,6 @@ function showMenu() {
   menuNav.classList.add('show');
   navItems.forEach((item) => item.classList.add('show'));
   disableScrolling();
-  // Set Menu State
   show = true;
 }
 
@@ -33,7 +29,6 @@ function hideMenu() {
   menuNav.classList.remove('show');
   navItems.forEach((item) => item.classList.remove('show'));
   enableScrolling();
-  // Set Menu State
   show = false;
 }
 
@@ -45,31 +40,9 @@ function disableScrolling() {
   };
 }
 
-// Different style of menu depending on width
-// function enableScrolling() {
-//   // Hide Navbar on Scroll Down
-//   var prevScrollpos = window.pageYOffset;
-//   window.onscroll = function () {
-//     var currentScrollPos = window.pageYOffset;
-//     if (x.matches) {
-//       document.querySelector('.top').style.top = '0';
-//     } else {
-//       if (prevScrollpos > currentScrollPos) {
-//         document.querySelector('.top').style.top = '0';
-//       } else {
-//         document.querySelector('.top').style.top = '-8rem';
-//       }
-//       prevScrollpos = currentScrollPos;
-//     }
-//   };
-// }
 function enableScrolling() {
   window.onscroll = function () {};
 }
-
-// var x = window.matchMedia('(max-width: 768px)');
-// enableScrolling(x);
-// x.addListener(enableScrolling);
 
 // Scroll to id
 function smoothScroll(target, duration) {
